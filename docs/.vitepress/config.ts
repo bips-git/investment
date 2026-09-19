@@ -38,6 +38,7 @@ export default defineConfig({
   base: "/investment/",
   cleanUrls: true,
   lastUpdated: true,
+  srcExclude: ["README.md"],
 
   // Turn off VitePress's own light/dark toggle; the Catppuccin switcher replaces it.
   appearance: false,
