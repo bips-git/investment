@@ -1,0 +1,11 @@
+[
+  { "slug": "money-foundations", "title": "Money Foundations", "icon": "💰", "blurb": "Inflation, compounding, risk and where money can go" },
+  { "slug": "market-system", "title": "The Market System and Your Accounts", "icon": "🏛️", "blurb": "SEBI, exchanges, RTAs, KYC and what apps like Groww really are" },
+  { "slug": "mutual-funds", "title": "Mutual Funds", "icon": "🧺", "blurb": "Units, NAV, fund types, costs and factsheets" },
+  { "slug": "sip", "title": "SIP", "icon": "🔁", "blurb": "How SIPs work, running one, and measuring returns" },
+  { "slug": "stocks", "title": "Stocks", "icon": "📈", "blurb": "Shares, trading, IPOs and reading a stock page" },
+  { "slug": "leverage-derivatives", "title": "Leverage and Derivatives", "icon": "⚡", "blurb": "MTF, futures, options and why most traders lose" },
+  { "slug": "portfolio", "title": "Portfolio Building", "icon": "🧭", "blurb": "Goals, asset allocation, rebalancing and behaviour" },
+  { "slug": "costs-taxes", "title": "Costs and Taxes", "icon": "🧾", "blurb": "Every charge explained, taxes and filing basics" },
+  { "slug": "staying-safe", "title": "Staying Safe", "icon": "🛡️", "blurb": "Scams, an app safety checklist and complaint routes" }
+]
