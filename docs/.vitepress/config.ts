@@ -26,12 +26,31 @@ const extras = [["glossary", "Glossary"], ["resources", "Resources"]]
   .filter(([f]) => fs.existsSync(path.join(docsDir, `${f}.md`)))
   .map(([f, t]) => ({ text: t, link: `/${f}` }))
 
+// Applies the saved Catppuccin flavor before first paint (no flash on reload).
+// Default is "latte"; change the fallback below to make another flavor the default.
+const flavorScript = `(function(){var d=document.documentElement,f;try{f=localStorage.getItem('ctp-flavor')}catch(e){}
+if(['latte','frappe','macchiato','mocha'].indexOf(f)<0)f='latte';
+d.setAttribute('data-flavor',f);d.classList.toggle('dark',f!=='latte');})();`
+
 export default defineConfig({
   title: "Investing: Zero to Hero",
   description: "A plain-English guide to SIPs, mutual funds and investing apps in India",
   base: "/investment/",
   cleanUrls: true,
   lastUpdated: true,
+
+  // Turn off VitePress's own light/dark toggle; the Catppuccin switcher replaces it.
+  appearance: false,
+
+  // Code blocks: Latte tokens for the light flavor, Mocha tokens for the three dark ones.
+  markdown: {
+    theme: { light: "catppuccin-latte", dark: "catppuccin-mocha" },
+  },
+
+  head: [
+    ["script", {}, flavorScript],
+  ],
+
   themeConfig: {
     nav: [
       ...(groups.length
